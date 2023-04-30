@@ -1,0 +1,1134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* start main page */
+/* start nav */
+body {
+  background-color: #010001;
+}
+/* start menu box */
+.menu-box {
+  position: fixed;
+  left: -300px;
+  z-index: 99999;
+  background-color: #010001;
+  border-radius: 0 20px 20px 0;
+  border: 3px solid orange;
+  transition: 1s ease-in-out;
+  top: 0;
+  width: 0px;
+  height: 0vh;
+}
+.show-box {
+  left: 0;
+}
+.menu-box .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.menu-box .content .logo h3 {
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  padding: 15px 25px;
+}
+.menu-box .content .logo span {
+  color: orange;
+}
+.menu-box .content .car-links ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.menu-box .content .car-links ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.5s ease;
+}
+.menu-box .content .car-links ul a:hover {
+  color: orange;
+}
+.menu-box .content .car-links h3 {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-right: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.menu-box .content .car-links h3 span {
+  color: orange;
+}
+@media screen and (width >= 767px) {
+  .menu-box {
+    display: none;
+  }
+}
+/* end menu box */
+/* start nav */
+.main-head {
+  width: 100%;
+}
+.main-head .main-nav {
+  position: fixed;
+  display: flex;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  justify-content: space-around;
+  border-radius: 0 0 20px 20px;
+  z-index: 5555;
+  transition: 0.5s;
+}
+.main-nav .logo {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  padding: 15px 25px;
+}
+.main-nav .logo span {
+  color: orange;
+}
+.main-nav .nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 15px 25px;
+}
+.nav-links ul a {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: 0.5s;
+}
+.nav-links ul .active {
+  color: orange;
+  border-bottom: 2px solid;
+}
+.nav-links ul a:hover {
+  color: orange;
+}
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  right: 0;
+  top: 15px;
+  transition: 2s;
+}
+.hamburger:hover span {
+  background: orange;
+  transform: translateY(5px);
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+/* end nav */
+/* start main sec */
+.main-sec {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.main-sec #MyVideo {
+  position: inherit;
+  min-height: 100%;
+  min-width: 100%;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+}
+.main-contant {
+  position: absolute;
+  z-index: 1000;
+  bottom: 200px;
+  left: 0px;
+  background-color: rgba(38, 33, 33, 0.5);
+  padding: 20px;
+  text-align: center;
+  border-radius: 100px;
+}
+.main-contant h2 {
+  font-size: 38px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.main-contant h2 span {
+  color: orange;
+  margin-left: 10px;
+}
+.main-contant p {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 10px 0;
+}
+.main-contant a {
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  outline: 3px solid orange;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 12px;
+  transition: 1s;
+  position: relative;
+}
+.main-contant a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 0;
+  background-color: orange;
+  border-radius: 20px;
+  transition: 0.5s ease-in;
+}
+.main-contant a:hover::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+/*end main sec */
+/* start features sec */
+.features {
+  min-height: 100vh;
+  text-align: center;
+}
+.features-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.features-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.features-cards .card {
+  width: 21em;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  background-color: #141313;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+  border: 3px solid orange;
+  box-shadow: rgba(235, 167, 8, 0.25) 0px 54px 55px;
+}
+.features-cards .card:hover {
+  background-color: #070606;
+  border-radius: 0;
+  transform: scale(1.01);
+}
+.features-cards .card img {
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.features-cards .card h2 {
+  font-size: 25px;
+  color: orange;
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 20px;
+}
+.features-cards .card p {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 20px;
+}
+.spikes {
+  position: relative;
+  background: orange;
+  height: 30px;
+}
+
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 50px;
+  background-size: 50px 100%;
+  background-image: linear-gradient(135deg, orange 25%, transparent 25%),
+    linear-gradient(225deg, orange 25%, transparent 25%);
+  background-position: 0 0;
+}
+/* end features sec */
+/* start debartments sec */
+.debartments {
+  margin-top: 0px;
+  text-align: center;
+  position: relative;
+}
+.debartments .debartment-title {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 20px;
+  border: 3px solid orange;
+  width: 300px;
+  margin-left: 40%;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+.debartments .debartment-title:hover {
+  color: #fff;
+  background-color: orange;
+  border-radius: 0;
+}
+.debartment-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.debartment-cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 21em;
+  margin: 25px;
+  max-height: 550px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border: 3px orange solid;
+  transition: 0.5s;
+  text-align: center;
+}
+.debartment-cards .card:hover {
+  box-shadow: rgba(235, 167, 8, 0.25) 0px 54px 55px,
+    rgba(245, 164, 4, 0.12) 0px -12px 30px, rgba(148, 77, 0, 0.12) 0px 4px 6px,
+    rgba(248, 145, 1, 0.17) 0px 12px 13px, orange 0px -3px 5px;
+  transform: translateY(15px);
+}
+.debartment-cards .card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-left: 60px;
+}
+.debartment-cards .card .card-contant {
+  margin-top: 20px;
+  padding: 20px;
+}
+.debartment-cards .card .card-contant h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: orange;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+.debartment-cards .card .card-contant p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.debartment-cards .card a {
+  display: block;
+  padding: 7px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-family: sans-serif;
+  border-radius: 20px;
+  margin: 15px 10px;
+  background-color: orange;
+  border: 3px orange solid;
+  transition: 0.5s ease;
+}
+.debartment-cards .card a:hover {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+.debartments .over-back {
+  background-color: rgba(246, 118, 20, 0.5);
+  border-radius: 50%;
+  z-index: -555;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  margin-top: 30%;
+  animation-name: over-back;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.debartments .over-back2 {
+  background-color: rgba(251, 146, 66, 0.5);
+  border-radius: 50%;
+  z-index: -555;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  margin-top: 15%;
+  animation-name: over-back2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  right: 0;
+  margin-right: 50px;
+}
+@keyframes over-back {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  75% {
+    transform: translateY(24px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes over-back2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  75% {
+    transform: translateY(24px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* end debartments sec */
+/* start footer */
+.main-foot {
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(0%, 0%, 0%, 0.5);
+  backdrop-filter: blur(8px);
+  border: 3px solid orange;
+  border-bottom: 0;
+  border-radius: 20px;
+  position: relative;
+}
+.main-foot .footer-back {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background-color: rgb(100%, 65%, 0%, 0.3);
+  animation-name: foot-back;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes foot-back {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  75% {
+    transform: translateY(24px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.main-foot .foot-title h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-top: 100px;
+}
+.main-foot .foot-title span {
+  color: orange;
+}
+.page-links h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: orange;
+  letter-spacing: 0.5px;
+}
+.page-links ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-links ul a {
+  display: block;
+  font-size: 18px;
+  color: orange;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+  text-align: center;
+  padding: 7px;
+}
+.page-links ul a:hover {
+  background-color: transparent;
+}
+.our-links h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: orange;
+  letter-spacing: 0.5px;
+}
+.our-links ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: center;
+}
+.our-links ul a {
+  display: block;
+  font-size: 18px;
+  color: orange;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+  text-align: center;
+  padding: 7px;
+}
+.our-links ul a:hover {
+  background-color: transparent;
+}
+/* end footer */
+/* start responsive */
+@media screen and (max-width: 767px) {
+  .main-nav .logo {
+    margin-left: 30px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  .main-contant {
+    left: 30px;
+    top: 150px;
+  }
+  .main-sec #MyVideo {
+    position: inherit;
+    left: -500px;
+  }
+  .features-cards .card {
+    margin-top: 50px;
+    padding: 15px;
+  }
+  .debartments .debartment-title {
+    margin-left: 15%;
+    margin-top: 60px;
+  }
+  .debartments .over-back {
+    margin-top: 100%;
+  }
+  .debartments .over-back2 {
+    bottom: 400px;
+    right: 0;
+    margin-right: 0;
+  }
+  .main-foot {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-foot .foot-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .main-foot .foot-title h2 {
+    margin-top: 0;
+  }
+  .page-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .our-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .main-foot .footer-back {
+    left: 50px;
+    top: 100px;
+  }
+}
+/* end responsive */
+/* end main page */
+/* start mercedes-sec */
+.mercedes-sec {
+  min-height: 100vh;
+  overflow: hidden;
+  background: url(mercedes\ background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mercedes-info {
+  width: 100%;
+}
+.mercedes-info .mercedes-title {
+  font-size: 30px;
+  color: #fff;
+  background-color: orange;
+  border-radius: 20px;
+  border: 3px solid orange;
+  padding: 7px 10px;
+  width: 300px;
+  margin-left: 40%;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  text-align: center;
+}
+.mercedes-info .mercedes-title:hover {
+  color: orange;
+  background-color: transparent;
+}
+.mercedes-info .mercedes-info-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20px;
+}
+.mercedes-info .mercedes-info-cards .card {
+  margin: 25px;
+  width: 21em;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: rgba(235, 167, 8, 0.25) 0px 54px 55px;
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+.mercedes-info .mercedes-info-cards .card:hover {
+  box-shadow: rgba(235, 167, 8, 0.25) 0px 54px 55px,
+    rgba(245, 164, 4, 0.12) 0px -12px 30px, rgba(148, 77, 0, 0.12) 0px 4px 6px,
+    rgba(248, 145, 1, 0.17) 0px 12px 13px, orange 0px -3px 5px;
+  transform: translateY(-20px);
+}
+.mercedes-info .mercedes-info-cards .card img {
+  border-radius: 20px;
+  width: 80%;
+}
+.mercedes-info .mercedes-info-cards .card h3 {
+  font-size: 25px;
+  color: orange;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.mercedes-info .mercedes-info-cards .card p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+.mercedes-cars {
+  text-align: center;
+  width: 100%;
+}
+.mercedes-cars .mercedes-title {
+  font-size: 30px;
+  color: #fff;
+  background-color: orange;
+  border-radius: 20px;
+  border: 3px solid orange;
+  padding: 7px 10px;
+  width: 250px;
+  margin-left: 43%;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.mercedes-cars .mercedes-title:hover {
+  color: orange;
+  background-color: transparent;
+}
+.cars-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.cars-cards .card {
+  margin: 25px;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  width: 21em;
+  box-shadow: rgba(235, 167, 8, 0.25) 0px 54px 55px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.cars-cards .card:hover {
+  box-shadow: rgba(235, 167, 8, 0.25) 0px 54px 55px,
+    rgba(245, 164, 4, 0.12) 0px -12px 30px, rgba(148, 77, 0, 0.12) 0px 4px 6px,
+    rgba(248, 145, 1, 0.17) 0px 12px 13px, orange 0px -3px 5px;
+  transform: translateY(20px);
+}
+.cars-cards .card img {
+  border-radius: 20px;
+  height: 220px;
+}
+.cars-cards .card h3 {
+  font-size: 25px;
+  color: orange;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.cars-cards .card p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.cars-cards .card a {
+  font-size: 20px;
+  color: #fff;
+  background-color: orange;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.5s ease-in;
+  padding: 5px 15px;
+  margin-top: 35px;
+  border: 2px solid orange;
+  width: 100%;
+}
+.cars-cards .card a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+/* end mercedes-sec */
+/* start BMW sec */
+.BMW-sec {
+  background: url(BMW\ background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.cars-cards .card #detil-btn {
+  font-size: 20px;
+  font-family: 600;
+  color: #fff;
+  padding: 5px 15px;
+  background-color: orange;
+  border: 2px solid orange;
+  border-radius: 20px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.cars-cards .card #detil-btn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+/* end BMW sec */
+/* start Audi sec */
+.Audi-sec {
+  background: url(Audi\ background.jpg) no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  overflow: hidden;
+  background-position: center;
+}
+/* end Audi sec */
+/* start Lamborghini-sec */
+.Lamborghini-sec {
+  background: url(Lamborghini\ background.jpg) no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  overflow: hidden;
+  background-position: center;
+}
+/* end Lamborghini-sec */
+.detail-contant {
+  background-color: #010001;
+  border: 2px solid orange;
+  position: fixed;
+  top: -100%;
+  right: 10%;
+  z-index: 55;
+  padding: 50px;
+  border-radius: 20px;
+  width: auto;
+  text-align: center;
+  transition: 1s;
+  margin-left: 50px;
+  min-width: 80%;
+  display: none;
+}
+.open {
+  top: 10%;
+  display: block;
+}
+.detail-contant h2 {
+  color: orange;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.detail-contant ol {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  line-height: 30px;
+}
+.detail-contant #close-btn {
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: orange;
+  border: 2px solid orange;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.5s;
+}
+.detail-contant #close-btn:hover {
+  background-color: transparent;
+}
+/* start about us page */
+.container {
+  position: relative;
+  background: #2c3e50;
+  height: 60vh;
+}
+
+.wave {
+  position: absolute;
+  height: 170px;
+  width: 100%;
+  background: #2c3e50;
+  bottom: 0;
+}
+
+.wave::before,
+.wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: #010001;
+  right: 0;
+  top: 60%;
+}
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: #2c3e50;
+  left: 0;
+  top: 40%;
+}
+.about-contant {
+  position: absolute;
+  z-index: 1000;
+  bottom: 20px;
+  left: 0px;
+  top: 150px;
+}
+.my-info {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.my-info h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  background-color: orange;
+  border: 3px solid orange;
+  border-radius: 20px;
+  width: 200px;
+  margin-left: 43%;
+  margin-top: 150px;
+  transition: 0.5s;
+  margin-bottom: 50px;
+}
+.my-info h3:hover {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+.my-info .about-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.my-info .about-cards .card {
+  width: 21em;
+  border-radius: 20px;
+  border: 3px solid orange;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: 0.5s;
+}
+.my-info .about-cards .card:hover {
+  box-shadow: rgba(235, 167, 8, 0.25) 0px 54px 55px,
+    rgba(245, 164, 4, 0.12) 0px -12px 30px, rgba(148, 77, 0, 0.12) 0px 4px 6px,
+    rgba(248, 145, 1, 0.17) 0px 12px 13px, orange 0px -3px 5px;
+  transform: translateY(-15px);
+}
+.my-info .about-cards .card img {
+  width: 230px;
+  height: 230px;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 50px;
+}
+.my-info .about-cards .card h4 {
+  font-size: 25px;
+  font-weight: 600;
+  color: orange;
+  margin-bottom: 15px;
+}
+.my-info .about-cards .card ul {
+  list-style: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.my-info .about-cards .card ul li {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+.my-info .about-cards .card ol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.my-info .about-cards .card ol a {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+.my-info .about-cards .card ol a:hover {
+  color: orange;
+}
+.about-back {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgb(100%, 65%, 0%, 0.5);
+  top: 200px;
+  left: 200px;
+  z-index: -11;
+  animation-name: about-back;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.about-back2 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgb(100%, 65%, 0%, 0.5);
+  top: 350px;
+  right: 150px;
+  z-index: -11;
+  animation-name: about-back2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes about-back {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  75% {
+    transform: translateY(24px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes about-back2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  75% {
+    transform: translateY(24px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* end about us page */
+/* start responsive cars pages */
+@media screen and (max-width: 768px) {
+  .mercedes-info .mercedes-title {
+    margin-left: 15%;
+  }
+  .mercedes-cars .mercedes-title {
+    margin-left: 20%;
+  }
+  .main-contant p {
+    font-size: 20px;
+  }
+  .main-contant h2 {
+    font-size: 40px;
+    top: 0;
+  }
+  .detail-contant {
+    width: 93%;
+    overflow-y: scroll;
+    max-height: 80vh;
+    inset: 0;
+    top: 100px;
+    left: -30px;
+  }
+  .container {
+    height: 80vh;
+  }
+  .about-contant {
+    width: 90%;
+    bottom: 100px;
+    border-radius: 0 40px 40px 0;
+  }
+  .my-info h3 {
+    margin-left: 28%;
+  }
+  .about-back {
+    top: 0px;
+    left: -100px;
+  }
+  .about-back2 {
+    right: -100px;
+    top: 75%;
+  }
+}
+/* end responsive cars pages */
